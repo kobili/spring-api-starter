@@ -1,8 +1,10 @@
 spring:
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: create-drop
   datasource:
     url: jdbc:postgresql://localhost:5432/flyway_db
     username: postgres
     password: password
+  flyway:
+    locations: resources/db/migration
